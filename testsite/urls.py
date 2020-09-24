@@ -1,11 +1,12 @@
-from django.conf.urls import *
+# from django.conf.urls import *
+from . import views
+from django.urls import *
+# # Uncomment the next two lines to enable the admin:
+# # from django.contrib import admin
+# # admin.autodiscover()
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
-urlpatterns = patterns('',
-                       (r'^hello-django', 'testsite.views.hello'),
+# urlpatterns = patterns('',
+#                        (r'^hello-django', include('testsite.views.hello')),
     # Example:
     # (r'^testsite/', include('testsite.foo.urls')),
 
@@ -15,4 +16,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
-)
+# )
+
+urlpatterns = [path('hello-django', views.hello, name='main-view')]

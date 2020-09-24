@@ -1,0 +1,12 @@
+#!/Users/zach.groves/projects/my_sandboxes/python_tornado_django/django-tornado-demo/testsite/cool_name/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'ddtrace==0.38.1','console_scripts','pyddprofile'
+__requires__ = 'ddtrace==0.38.1'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('ddtrace==0.38.1', 'console_scripts', 'pyddprofile')()
+    )
